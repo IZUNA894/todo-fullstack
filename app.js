@@ -11,10 +11,10 @@ const AppError = require("./utils/appError");
 const PORT = process.env.PORT || 3001;
 //middleware
 
-//for serving static files
-//app.use(express.static(`${__dirname}/build`));
 //for logging req
 app.use(morgan("dev"));
+//for serving static files
+app.use(express.static(`${__dirname}/build`));
 //for parsing json into req.body
 app.use(express.json({ limit: "10kb" }));
 //for parsing cookies
