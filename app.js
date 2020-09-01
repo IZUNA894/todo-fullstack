@@ -10,10 +10,9 @@ const todoRouter = require("./routers/todoRouter");
 const AppError = require("./utils/appError");
 const PORT = process.env.PORT || 3001;
 //middleware
+
 //for serving static files
-//app.use(express.static(`${__dirname}/public`));
-//for serving static files
-app.use(express.static(`${__dirname}/build`));
+//app.use(express.static(`${__dirname}/build`));
 //for logging req
 app.use(morgan("dev"));
 //for parsing json into req.body
